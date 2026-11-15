@@ -1,0 +1,69 @@
+# --- Secrets and local configuration ---
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+# OAuth client files (Google "client_secret_*.json" etc.): keep in %LOCALAPPDATA%\DuuniScript
+client_secret*.json
+*client*secret*.json
+google-client*.json
+
+# --- Private data (must live in %LOCALAPPDATA%\DuuniScript or APP_DATA_DIR) ---
+data/
+storage/
+uploads/
+private/
+backups/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# --- Browser automation state ---
+playwright/.auth/
+**/browser-profile/
+**/user-data-dir/
+
+# --- Models and vector data ---
+models/
+*.gguf
+*.safetensors
+vector_store/
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# --- Node / frontend build output ---
+node_modules/
+.vite/
+
+# --- Archives and OS clutter ---
+*.zip
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Editor ---
+.vscode/
+.idea/
